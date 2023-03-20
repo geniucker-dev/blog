@@ -40,8 +40,8 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  # fab fa-github: https://github.com/xxxxx || Github
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email
+  fab fa-github: https://github.com/geniucker || Github
+  fas fa-envelope: mailto:me@geniucker.top || Email
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
@@ -55,7 +55,7 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   preload: false
   CDN:
 
@@ -98,7 +98,7 @@ avatar:
   effect: false
 
 # Disable all banner image
-disable_top_img: false
+disable_top_img: true
 
 # The banner image of home page
 index_img:
@@ -285,7 +285,7 @@ comments:
   # If you set it to true, the comment count will be invalid
   lazyload: true
   count: true # Display comment count in post's top_img
-  card_post_count: true # Display comment count in Home Page
+  card_post_count: false # Display comment count in Home Page
 
 # disqus
 # https://disqus.com/
@@ -547,7 +547,7 @@ enter_transitions: true
 # canvas_ribbon (靜止彩帶背景)
 # See: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: false
+  enable: true
   size: 150
   alpha: 0.6
   zIndex: -1
@@ -765,7 +765,7 @@ darkmode:
   autoChangeMode: false
 
 # show scroll percent in scroll-to-top button
-rightside_scroll_percent: false
+rightside_scroll_percent: true
 
 # Don't modify the following settings unless you know how they work (非必要請不要修改 )
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
