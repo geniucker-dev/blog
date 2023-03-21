@@ -163,4 +163,4 @@ NexT7.8.0以后为：
 
 # 效果演示
 ![](https://source.geniucker.top/image/20200425-1-2.jpg)
-我的[友情链接页面](/links/)
+~~我的[友情链接页面](/links/)~~
