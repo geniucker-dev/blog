@@ -42,6 +42,8 @@ copy:
 social:
   fab fa-github: https://github.com/geniucker || Github
   fas fa-envelope: mailto:me@geniucker.top || Email
+  fas fa-rss: /atom.xml || RSS
+
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
