@@ -39,10 +39,6 @@ jobs:
         with:
           # Version Spec of the version to use. Examples: 12.x, 10.15.1, >=10.15.0.
           node-version: 18.15.0
-          # Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm.
-          cache: yarn
-          # Used to specify the path to a dependency file: package-lock.json, yarn.lock, etc. Supports wildcards or a list of file names for caching multiple dependencies.
-          cache-dependency-path: yarn.lock
       - name: generate
         run: |
           yarn install
