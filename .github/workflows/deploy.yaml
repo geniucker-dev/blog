@@ -45,6 +45,7 @@ jobs:
           cache-dependency-path: yarn.lock
       - name: generate
         run: |
+          yarn --prefer-offline
           yarn hexo g
           
       - name: Upload artifact
