@@ -13,7 +13,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -52,6 +52,17 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: public
+      - name: push to branch static page
+        env: 
+          key: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd /public
+          git init
+          git switch -c static_page
+          git add -A
+          git commit -m "update static pages"
+          git remote add origin "https://$key@github.gom/geniucker/geniucker.github.io.git"
+          git push origin static_page -f
           
   # Deployment job
   deploy:
