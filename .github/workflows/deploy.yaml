@@ -56,7 +56,8 @@ jobs:
         env: 
           key: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cd /public
+          pwd
+          cd public
           git init
           git switch -c static_page
           git add -A
