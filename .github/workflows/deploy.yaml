@@ -62,7 +62,7 @@ jobs:
           git switch -c static_page
           git add -A
           git commit -m "update static pages"
-          git remote add origin "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git push origin static_page -f
           
   # Deployment job
