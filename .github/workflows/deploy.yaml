@@ -53,16 +53,15 @@ jobs:
         with:
           path: public
       - name: push to branch static page
-        env: 
-          key: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          pwd
-          cd public
+          git config --global user.name 'Git bot'
+          git config --global user.email 'bot@noreply.github.com'
+          cd /public
           git init
           git switch -c static_page
           git add -A
           git commit -m "update static pages"
-          git remote add origin "https://$key@github.gom/geniucker/geniucker.github.io.git"
+          git remote add origin "https://${{ secrets.GITHUB_TOKEN }}@github.gom/${{ github.repository }}"
           git push origin static_page -f
           
   # Deployment job
