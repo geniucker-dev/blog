@@ -19,6 +19,7 @@ navbar:
     - { key: 'archive', link: '/archives/', icon: 'iconfont icon-archive-fill' }
     - { key: 'category', link: '/categories/', icon: 'iconfont icon-category-fill' }
     - { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
+    - { key: 'links', link: '/links/', icon: 'iconfont icon-link-fill' }
     - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill' }
 
 
@@ -53,3 +54,20 @@ footer:
     source: "busuanzi"  # 可选 leancloud | busuanzi  根据自己需求选择
     pv_format: "总访问量 {} 次"  # 显示的文本，{}是数字的占位符（必须包含)，下同
     uv_format: "总访客数 {} 人"
+
+
+links:
+  items:
+    - {
+      title: "cyc's notebook",
+      intro: "花生瓜子八宝粥，编程建模GPT",
+      link: "https://cyc-987.github.io/",
+      avatar: "https://cyc-987.github.io/logo.jpeg"
+    }
+    - {
+      title: "暮森の小屋",
+      intro: "",
+      link: "https://musanico.github.io/",
+      avatar: "https://avatars.githubusercontent.com/u/108330876?s=400&u=0c5c811a193fd0dac9e46348ac2104dcea881654&v=4"
+    }
+  default_avatar: /img/avatar.png
