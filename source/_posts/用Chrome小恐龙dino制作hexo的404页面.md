@@ -3,7 +3,7 @@ title: 用Chrome小恐龙dino制作Hexo的404页面
 date: 2020-07-23 14:00:44
 updated:
 categories:
-  - Hexo建站
+  - [技术]
 tags:
   - Chrome小恐龙
   - 404页面

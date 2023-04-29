@@ -1,8 +1,7 @@
 ---
 title: npm使用国内（淘宝）源
 categories:
-  - [笔记]
-  - [实用技巧及工具]
+  - [技术]
 tags:
   - npm
   - 实用技巧

@@ -3,7 +3,8 @@ title: Python 八皇后问题
 date: 2020-03-26 14:25:59
 updated:
 categories:
-  - [笔记,Python笔记]
+  - [笔记]
+  - [算法]
 tags:
   - Python
   - 算法

@@ -3,7 +3,7 @@ title: Hexo NexT主题自定义友链页面
 date: 2020-04-25 13:17:17
 updated:
 categories:
-  - Hexo建站
+  - [技术]
 tags:
   - Hexo
   - 建站

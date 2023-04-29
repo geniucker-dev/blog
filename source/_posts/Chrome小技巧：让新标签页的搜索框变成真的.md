@@ -1,7 +1,7 @@
 ---
 title: Chrome小技巧：让新标签页的搜索框变成真的
 categories:
-  - 实用技巧及工具
+  - [技术]
 tags:
   - Chrome
   - 实用技巧
