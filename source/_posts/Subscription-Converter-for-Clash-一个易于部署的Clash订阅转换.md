@@ -64,6 +64,7 @@ Vercel 的 Serverless Function 支持 Node.js, Go, Python, Ruby，显然我只�
 
 ## 当前支持的功能
 综上，目前我实现了如下功能
+- 一个可以勉强能看的订阅转换 Web-UI (感谢 [@Musanico](https://github.com/musanico))  
 - 大体基于 ACL 的规则（包括了ZJU专用规则）  
 - 基于 Provider 的节点自动更新  
 - 对ZJU Connect的支持  
