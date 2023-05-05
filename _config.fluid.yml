@@ -24,6 +24,31 @@ navbar:
 
 
 post:
+  meta:
+    # 作者，优先根据 front-matter 里 author 字段，其次是 hexo 配置中 author 值
+    # Author, based on `author` field in front-matter, if not set, based on `author` value in hexo config
+    author:
+      enable: true
+
+  # 在文章开头显示文章更新时间，该时间默认是 md 文件更新时间，可通过 front-matter 中 `updated` 手动指定（和 date 一样格式）
+  # Update date is displayed at the beginning of the post. The default date is the update date of the md file, which can be manually specified by `updated` in front-matter (same format as date)
+  updated:
+    enable: true
+
+    # 格式参照 ISO-8601 日期格式化
+    # ISO-8601 date format
+    # See: http://momentjs.cn/docs/#/parsing/string-format/
+    date_format: "LL a"
+
+    # 是否使用相对时间表示，比如："3 天前"
+    # If true, it will be a relative time, such as: "3 days ago"
+    relative: true
+
+    # 提示标签类型
+    # Note class
+    # Options: default | primary | info | success | warning | danger | light
+    note_class: info
+
   math:
     # 开启后文章默认可用，自定义页面如需使用，需在 Front-matter 中指定 `math: true`
     # If you want to use math on the custom page, you need to set `math: true` in Front-matter

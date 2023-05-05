@@ -7,9 +7,12 @@ title: Geniucker's Blog
 subtitle: ''
 description: ''
 keywords:
+  - 笔记
+  - 技术
+  - 随笔
 author: Geniucker
 language: en
-timezone: ''
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'

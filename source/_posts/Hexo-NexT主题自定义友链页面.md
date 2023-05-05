@@ -1,15 +1,15 @@
 ---
 title: Hexo NexT主题自定义友链页面
-date: 2020-04-25 13:17:17
-updated:
 categories:
   - [技术]
 tags:
   - Hexo
   - 建站
   - NexT主题
+date: 2020-04-25 13:17:17
+updated: 2020-04-25 13:17:17
 ---
-Next主题可增加友链，在主题配置文件`_config.yml`中`links`下添加，展示效果（图片来自[北宸的小站](https://links.jianshu.com/go?to=https%3A%2F%2Fwww.liaofuzhan.com)）：<!-- more -->
+Next主题可增加友链，在主题配置文件`_config.yml`中`links`下添加，展示效果（图片来自[北宸的小站](https://links.jianshu.com/go?to=https%3A%2F%2Fwww.liaofuzhan.com)）：  
 ![](https://source.geniucker.top/image/20200425-1-1.jpg)  
 当链接变多以后，页面的排版很不美观，这时候就需要给友链新增一个单独的页面了。网上其他的方法大部分都涉及到对模板的改动,会给日后的主题升级带来麻烦。本文的方法不涉及对模板的改动，但原理与网上的方法类似。**本方法适用于NexT6.0.2及以上（由于涉及到styles.styl等Hexo数据目录的操作）**
 
