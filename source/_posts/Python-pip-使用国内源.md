@@ -3,8 +3,7 @@ title: Python pip 使用国内源
 date: 2020-03-25 18:32:11
 updated:
 categories:
-  - [笔记,Python笔记]
-  - [实用技巧及工具]
+  - [技术]
 tags:
   - Python
   - pip
