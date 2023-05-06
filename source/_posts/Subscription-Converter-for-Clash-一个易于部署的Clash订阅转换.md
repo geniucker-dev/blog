@@ -9,11 +9,28 @@ categories:
   - [技术]
 math: false
 date: 2023-05-01 11:21:31
-updated: 2023-05-01 11:21:31
+updated: 2023-05-06 13:47:00
 ---
 
 自己的项目别人都发完博客了结果自己还没发过233，还是稍微记录一下  
 
+## 当前功能
+现在又两个分支 (但是由于某些原因我把他们分成了两个仓库)
+- 通用版（适合所有Clash用户）: <https://github.com/geniucker/sub-conv>  
+- ZJU专版: <https://github.com/geniucker/sub-conv-4-ZJU>  
+
+通用版本功能：
+- 一个可以勉强能看的订阅转换 Web-UI (感谢 [@Musanico](https://github.com/musanico))  
+- 大体基于 ACL 的规则  
+- 基于 Provider 的节点自动更新  
+- （为土豪）多机场用户提供了支持  
+- 剩余流量和总流量的显示（单机场的时候才有用，需要你的机场和你用的Clash同时支持，已知Clash for Windows, Clash Verge, Stash, Clash Meta for Android等已支持）  
+- 实现了 clash 订阅转换 proxy-provider 的 api, (一般人也不会去用吧), 不再依赖 Proxy Provider Converter , 用法<网页根目录>/provider?url=<你的订阅>,例如上面给出的示例,地址为https://sub-converter.geniucker.top/provider?url=<你的订阅>,<你的订阅>自行替换  
+- 支持配置文件 (config.py，之后说不定会写subconverter配置到本项目的转换)  
+
+ZJU专版在通用版的基础上增加了：
+- 对[ZJU Connect](https://github.com/Mythologyli/ZJU-Connect/)的支持  
+- 包括了ZJU专用规则 (来自[ZJU-Rule](https://github.com/Mythologyli/ZJU-Rule/))  
 ## 项目缘起
 ~~高考前两个月太空~~  
 一直在担心公共订阅转换的安全性问题。已开始我看到了 [subconverter](https://github.com/tindy2013/subconverter) ，但是当时身无分文，只能部署在 [Vercel](https://vercel.com/) 这样的 Serverless Function 里。但是由于 subconverter 是用 C++ 写的，无法在 Vercel 上部署（曾经可以部署可执行文件，但是我死活弄不出来），所以就有了自己写订阅转换的想法。  
@@ -58,7 +75,7 @@ Vercel 的 Serverless Function 支持 Node.js, Go, Python, Ruby，显然我只�
 于是，我事先了如下内容：
 - 多只因厂支持  
 - 配置文件  
-- 使用 GitHub Action 定时拉取一次规则然后缓存到仓库里（这会导致一个问题，fork仓库的自动更新规则产生的提交会和我都仓库的提交产生冲突导致无法拉取上游更新，我还不知道怎么解决。***要是你知道如何解决请务必联系我***）
+- 使用 GitHub Action 定时拉取一次规则然后缓存到仓库里~~（这会导致一个问题，fork仓库的自动更新规则产生的提交会和我都仓库的提交产生冲突导致无法拉取上游更新，我还不知道怎么解决。***要是你知道如何解决请务必联系我***）~~已解决这个问题  
 
 之后还遇到了 Vercel 用量告急的问题，这是因为请求太多了。在早先的实现里，我为每个地区的组单独开了provider，每个provider都会分别发出请求以拉取节点更新。在得知meta内核支持组内filter之后，提供了meta内核的选项，这样就可以每个只因厂只用一个provider然后在分组里面再匹配出对应地区的节点。  
 
