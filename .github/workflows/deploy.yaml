@@ -55,12 +55,12 @@ jobs:
           yarn hexo g
           
       - name: Upload artifact
-        if: github.event_name != 'pull_request'
+        if: github.event_name == 'push'
         uses: actions/upload-pages-artifact@v1
         with:
           path: public
       - name: push to branch static page
-        if: github.event_name != 'pull_request'
+        if: github.event_name == 'push'
         run: |
           git config --global user.name 'Git bot'
           git config --global user.email 'bot@noreply.github.com'
@@ -75,7 +75,7 @@ jobs:
           
   # Deployment job
   deploy:
-    if: github.event_name != 'pull_request'
+    if: github.event_name == 'push'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
