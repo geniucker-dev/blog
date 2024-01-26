@@ -2,7 +2,7 @@
 title: 通过 GitHub Copilot 免费使用 gpt-4
 math: false
 date: 2024-01-26 15:45:59
-updated: 2024-01-26 15:45:59
+updated: 2024-01-26 17:59:59
 tags:
   - GitHub Copilot
   - gpt-4
@@ -12,7 +12,7 @@ categories:
 
 这次介绍项目可以把 OpenAI API 格式的请求转发到 GitHub Copilot 服务端，从而免费使用 gpt-4。当然前提是你有 GitHub Copilot。对于学生，可以通过 GitHub Education 免费使用。
 
-先上项目链接: [CoGPT](https://github.com/Geniucker/CoGPT/)
+先上项目链接: <https://github.com/Geniucker/CoGPT>
 
 ## 原理介绍
 
