@@ -71,6 +71,16 @@ docker compose up -d
 
 默认情况下，服务会监听在 `localhost:8080`，如果需要修改，可以参考下文的 [配置](#配置) 部分。
 
+### Share Token
+
+如果你想要和朋友共享这个服务，直接共享你的 GitHub app token 是不安全的。这个功能就是为了这种情况设计的。你可以创建一个映射，将所谓的 share token 映射到真实的 GitHub app token。
+
+一种方式是设置环境变量或修改 `.env` 文件。你应该将 `SHARE_TOKEN` 设置为一个字符串，例如 `share-xxxxxxx1:ghu_xxxxxxx1,share-xxxxxxx2:ghu_xxxxxxx2`。格式为 `share-token:real-token,share-token:real-token`。你可以添加一个或多个映射。
+
+另一种方式是使用命令行参数。你可以运行 `./cogpt-api -share-token share-xxxxxxx1:ghu_xxxxxxx1,share-xxxxxxx2:ghu_xxxxxxx2` 来启动服务。你可以添加一个或多个映射。
+
+**注意** share token 必须以 `share-` 开头。不以 `share-` 开头的映射将会被忽略。
+
 ### 配置
 
 支持两种配置方式，一种是通过环境变量，一种是通过命令行参数
@@ -89,6 +99,7 @@ keys | default | description
 `CACHE_PATH` | `db/cache.sqlite3` | Path to sqlite database. Only used if `CACHE` is `true`
 `DEBUG` | `false` | Whether to enable debug mode. If true, the service will print debug info
 `LOG_LEVEL` | `info` | Log level. 
+`SHARE_TOKEN` | `` | Maps of share-token and real token. For example, `SHARE_TOKEN=share-xxxxxxx1:ghu_xxxxxxx1,share-xxxxxxx2:ghu_xxxxxxx2`.
 
 #### 命令行参数
 
