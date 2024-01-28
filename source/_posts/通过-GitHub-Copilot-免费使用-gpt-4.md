@@ -81,6 +81,8 @@ docker compose up -d
 
 **注意** share token 必须以 `share-` 开头。不以 `share-` 开头的映射将会被忽略。
 
+为了生成一个随机的 share token，你可以下载最新的 release 文件。解压后运行 `./gen-share-token`。
+
 ### 配置
 
 支持两种配置方式，一种是通过环境变量，一种是通过命令行参数
