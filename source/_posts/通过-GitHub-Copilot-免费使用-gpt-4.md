@@ -2,7 +2,7 @@
 title: 通过 GitHub Copilot 免费使用 gpt-4
 math: false
 date: 2024-01-26 15:45:59
-updated: 2024-01-26 17:59:59
+updated: 2024-01-29 15:00:59
 tags:
   - GitHub Copilot
   - gpt-4
@@ -70,6 +70,60 @@ docker compose up -d
 从 [Release](https://github.com/Geniucker/CoGPT/releases) 页面下载对应平台的文件，解压后运行其中的 `cogpt-api` 文件即可。
 
 默认情况下，服务会监听在 `localhost:8080`，如果需要修改，可以参考下文的 [配置](#配置) 部分。
+
+### 作为服务运行
+
+#### Linux
+
+对于基于 systemd 的 Linux，你可以按照下面的步骤操作。
+
+首先，从 [Release](https://github.com/Geniucker/CoGPT/releases) 页面下载最新的 Linux 版本。解压后将 `cogpt-api` 移动到 `/opt/cogpt/` 并赋予可执行权限。
+
+然后将 [cogpt-api.service](https://github.com/Geniucker/CoGPT/blob/main/examples/cogpt-api.service) 的内容复制到 `/etc/systemd/system/cogpt-api.service`。
+
+如果你需要修改配置，你应该编辑 `/opt/cogpt-api/.env` 文件。
+
+最后，运行下面的命令来启用并启动服务。
+
+```bash
+sudo systemctl enable cogpt-api
+sudo systemctl start cogpt-api
+```
+
+运行 `sudo systemctl stop cogpt-api` 来停止服务。
+
+运行 `sudo systemctl disable cogpt-api` 来禁用服务。
+
+#### MacOS
+
+对于 MacOS，服务基于 `launchd`。
+
+首先，从 [Release](https://github.com/Geniucker/CoGPT/releases) 页面下载最新的 MacOS 版本。解压后将 `cogpt-api` 移动到 `/opt/cogpt/` 并赋予可执行权限。
+
+然后将 [com.cogpt-api.plist](https://github.com/Geniucker/CoGPT/blob/main/examples/cogpt-api-service.ps1) 的内容复制到 `/Library/LaunchDaemons/com.cogpt-api.plist`。
+
+如果你需要修改配置，你应该编辑 `/opt/cogpt-api/.env` 文件。
+
+最后，运行 `sudo launchctl load /Library/LaunchDaemons/com.cogpt-api.plist` 来启动服务。
+
+运行 `sudo launchctl unload /Library/LaunchDaemons/com.cogpt-api.plist` 来停止服务。
+
+#### Windows
+
+对于 Windows，我们可以使用计划任务。你可以按照下面的步骤操作。
+
+首先，从 [Release](https://github.com/Geniucker/CoGPT/releases) 页面下载最新的 Windows 版本。解压到一个目录。假设是 `C:\CoGPT\`。
+
+然后下载 [cogpt-api-service.ps1](https://github.com/Geniucker/CoGPT/blob/main/examples/cogpt-api-service.ps1) 并放到 `C:\CoGPT\`。
+
+以管理员权限打开 PowerShell 并运行下面的命令。
+
+```powershell
+cd C:\CoGPT\
+.\cogpt-api-service.ps1 enable
+```
+
+同样，你可以运行 `.\cogpt-api-service.ps1 disable` 来禁用服务。
 
 ### Share Token
 
