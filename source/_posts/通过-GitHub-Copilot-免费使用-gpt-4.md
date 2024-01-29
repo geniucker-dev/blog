@@ -101,7 +101,7 @@ keys | default | description
 `CACHE_PATH` | `db/cache.sqlite3` | Path to sqlite database. Only used if `CACHE` is `true`
 `DEBUG` | `false` | Whether to enable debug mode. If true, the service will print debug info
 `LOG_LEVEL` | `info` | Log level. 
-`SHARE_TOKEN` | `` | Maps of share-token and real token. For example, `SHARE_TOKEN=share-xxxxxxx1:ghu_xxxxxxx1,share-xxxxxxx2:ghu_xxxxxxx2`.
+`SHARE_TOKEN` | `""` | Maps of share-token and real token. For example, `SHARE_TOKEN=share-xxxxxxx1:ghu_xxxxxxx1,share-xxxxxxx2:ghu_xxxxxxx2`.
 
 #### 命令行参数
 
