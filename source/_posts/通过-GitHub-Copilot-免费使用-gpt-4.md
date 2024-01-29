@@ -2,7 +2,7 @@
 title: 通过 GitHub Copilot 免费使用 gpt-4
 math: false
 date: 2024-01-26 15:45:59
-updated: 2024-01-29 15:00:59
+updated: 2024-01-29 15:36:59
 tags:
   - GitHub Copilot
   - gpt-4
@@ -56,12 +56,34 @@ categories:
 
 Linux 上非常推荐使用 Docker 部署
 
-```bash
-git clone https://github.com/Geniucker/CoGPT.git && cd CoGPT
-docker compose up -d
+在一个目录下创建一个 `docker-compose.yml` 文件，内容如下
+
+```yaml
+version: '3'
+
+services:
+  cogpt-api:
+    image: ghcr.io/geniucker/cogpt:latest
+    environment:
+      - HOST=0.0.0.0
+    ports:
+      - 8080:8080
+    volumes:
+      - ./db:/app/db
+      - ./log:/app/log
+    restart: unless-stopped
+    container_name: cogpt-api
 ```
 
+如果你想要使用开发版，将 `ghcr.io/geniucker/cogpt:latest` 替换为 `ghcr.io/geniucker/cogpt:dev`。
+
 默认情况下，服务会监听在 `8080` 端口，如果需要修改，可以修改 `docker-compose.yml` 文件中的 `ports` 部分。例如，如果你想要监听在 `8081` 端口，可以把 `8080:8080` 改为 `8081:8080`。
+
+其他配置也可以在 `environment` 部分修改。或者更方便的是，你可以修改 `.env` 文件（你可以将 `.env.example` 复制为 `.env` 并修改它）。**注意** `db` 和 `log` 的配置应该在 `docker-compose.yml` 的 `volumes` 部分修改。
+
+所有的配置选项都在 [配置](#配置) 部分列出。
+
+然后运行 `docker-compose up -d` 来启动服务。
 
 ### 本机部署
 
