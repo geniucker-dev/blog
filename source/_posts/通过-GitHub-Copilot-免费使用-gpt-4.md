@@ -2,7 +2,7 @@
 title: 通过 GitHub Copilot 免费使用 gpt-4
 math: false
 date: 2024-01-26 15:45:59
-updated: 2024-01-29 15:36:59
+updated: 2024-01-31 17:24:00
 tags:
   - GitHub Copilot
   - gpt-4
@@ -145,7 +145,16 @@ cd C:\CoGPT\
 .\cogpt-api-service.ps1 enable
 ```
 
-同样，你可以运行 `.\cogpt-api-service.ps1 disable` 来禁用服务。
+下面是所有可以使用的命令。所有命令都应该在 PowerShell **以管理员权限** 运行。
+
+```powershell
+./cogpt-api-service.ps1 enable  # 启用并启动服务
+./copgt-api-service.ps1 disable # 停止并禁用服务
+./cogpt-api-service.ps1 start   # 启动服务
+./cogpt-api-service.ps1 stop    # 停止服务
+./cogpt-api-service.ps1 restart # 重启服务
+./cogpt-api-service.ps1 status  # 检查服务状态
+```
 
 ### Share Token
 
