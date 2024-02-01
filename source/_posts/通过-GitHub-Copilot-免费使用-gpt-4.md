@@ -83,7 +83,7 @@ services:
 
 所有的配置选项都在 [配置](#配置) 部分列出。
 
-然后运行 `docker-compose up -d` 来启动服务。
+然后运行 `docker compose up -d` 来启动服务。
 
 ### 本机部署
 
@@ -136,7 +136,7 @@ sudo systemctl start cogpt-api
 
 首先，从 [Release](https://github.com/Geniucker/CoGPT/releases) 页面下载最新的 Windows 版本。解压到一个目录。假设是 `C:\CoGPT\`。
 
-然后下载 [cogpt-api-service.ps1](https://github.com/Geniucker/CoGPT/blob/main/examples/cogpt-api-service.ps1) 并放到 `C:\CoGPT\`。
+然后在 `C:\CoGPT\` 下创建一个 `cogpt-api-service.ps1` 文件，并把 [cogpt-api-service.ps1](https://github.com/Geniucker/CoGPT/blob/main/examples/cogpt-api-service.ps1) 的内容复制到 `cogpt-api-service.ps1`。
 
 以管理员权限打开 PowerShell 并运行下面的命令。
 
