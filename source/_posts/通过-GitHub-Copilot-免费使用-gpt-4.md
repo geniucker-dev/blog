@@ -63,7 +63,7 @@ version: '3'
 
 services:
   cogpt-api:
-    image: ghcr.io/geniucker/cogpt:latest
+    image: geniucker/cogpt:latest
     environment:
       - HOST=0.0.0.0
     ports:
@@ -75,7 +75,7 @@ services:
     container_name: cogpt-api
 ```
 
-如果你想要使用开发版，将 `ghcr.io/geniucker/cogpt:latest` 替换为 `ghcr.io/geniucker/cogpt:dev`。
+如果你想要使用开发版，将 `geniucker/cogpt:latest` 替换为 `geniucker/cogpt:dev`。
 
 默认情况下，服务会监听在 `8080` 端口，如果需要修改，可以修改 `docker-compose.yml` 文件中的 `ports` 部分。例如，如果你想要监听在 `8081` 端口，可以把 `8080:8080` 改为 `8081:8080`。
 
