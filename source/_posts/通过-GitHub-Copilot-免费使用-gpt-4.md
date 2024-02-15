@@ -28,6 +28,22 @@ categories:
 
 那么服务端剩下的选择基本上就是 Go, Java, Node.js 之类的语言了。由于我之前有接触过一点 Go，同时也给 [copilot-gpt4-service](https://github.com/aaamoon/copilot-gpt4-service) 项目贡献过了较多代码，所以我就选择了 Go 作为服务端的语言。这次我们使用了 [gin](https://github.com/gin-gonic/gin) 框架。
 
+## 支持的 API
+
+- `GET /`: 首页
+- `GET /health`: 健康检查
+- `GET /v1/models`: 获取模型列表
+- `POST /v1/chat/completions`: 对话 API
+- `POST /v1/embeddings`: 获取文本向量 API
+  - 请注意，此 API 与 OpenAI API 不完全兼容。  
+    对于 `input` 字段，OpenAI API 接受以下类型：
+      - string: 将转换为 embedding 的字符串。
+      - array: 将转换为 embedding 的字符串数组。
+      - array: 将转换为 embedding 的整数数组。
+      - array: 将转换为 embedding 的包含整数的数组的数组。
+  
+    不幸的是，此服务仅接受前两种类型以及包含字符串的数组的数组。
+
 ## 如何使用
 
 ### 警告
