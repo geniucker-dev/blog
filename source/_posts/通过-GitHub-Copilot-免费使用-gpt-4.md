@@ -222,7 +222,7 @@ keys | default | description
 
 首先，你要确保你的 GitHub 账号有 GitHub Copilot 的权限。然后从 [Release](https://github.com/Geniucker/CoGPT/releases) 页面下载对应平台的文件，解压后运行其中的 `cogpt-get-apptoken` 文件即可，按照说明操作即可。
 
-如有必要设置代理，运行`./cogpt-get-apptoken -h` 查看帮助
+可以通过环境变量或命令行参数设置代理，对于命令行参数，可以通过 `./cogpt-get-apptoken -h` 查看帮助
 
 #### 使用
 
