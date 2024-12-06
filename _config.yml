@@ -112,3 +112,18 @@ deploy:
 marked:
   prependRoot: true
   postAsset: true
+
+sitemap:
+  path:
+    - sitemap.xml
+  tags: true
+  categories: true
+
+feed:
+  enable: true
+  type:
+    - atom
+    - rss2
+  path:
+    - atom.xml
+    - rss2.xml
