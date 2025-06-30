@@ -49,8 +49,8 @@ jobs:
 
       - name: generate
         run: |
-          npm install hexo-cli -g
-          hexo generate
+          yarn --prefer-offlineAdd
+          yarn hexo g
 
       - name: push to branch static page
         if: github.event_name == 'push'
